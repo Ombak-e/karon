@@ -1,0 +1,422 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial,sans-serif; 
+}
+header{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 5%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 86%;
+    position: sticky; /* Make the header sticky */
+    top: 0; /* Stick to the top of the viewport */
+    z-index: 1; /* Ensure it stays on top of other elements */
+}
+.logo{
+    font-size: 30px;
+    color:yellow;
+    font-weight: 1.5px;
+    cursor: pointer;
+    text-shadow: 0 0 15px yellow;
+}
+.logo:hover{
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+nav {
+    display: flex;
+    flex-wrap: wrap; /* Allow navigation items to wrap */
+    align-items: center;
+    position: sticky; /* Make the nav sticky */
+    top: 0; /* Stick to the top of the viewport */
+    z-index: 1; /* Keep it above most elements */
+}
+nav li{
+    display: inline-block;
+    list-style: none;
+    padding: 0 10px;
+}
+a,button{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    cursor: pointer;
+}
+button{
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 2px solid yellow;
+    color: white;   
+    transition: background-color 0.6s ease, color 0.6s ease;
+    border-radius: 20px;
+}
+nav li a:hover{
+    color: #ece90a;
+    transition: color 0.4s ease, border-bottom 0.4s ease;
+    border-bottom: 2px solid yellow;
+}
+button:hover{
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}
+
+/* Home Section */
+
+#home{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;   
+    background-color: rgba(0, 0, 0, 0.5);
+    
+}
+#home ::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(tot.jpg) no-repeat center center/cover;
+    height: 1015px;  
+    width: 100%;
+    z-index: -1;
+    opacity: .8;
+}
+.home-wrap {
+   
+    z-index: 1; /* Ensure text and button are above the background image */
+}    
+#home h1 {
+    color: yellow; /* Set the h1 color to yellow */
+    font-size: 50px; /* Adjust the font size as needed */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Optional shadow for better readability */
+    margin: 10px 0; /* Add some margin for spacing */
+}
+
+#home h5 {
+    color: white; /* Keep the other text in white */
+    font-size: 20px;
+    margin: 5px 0;
+}
+/* About Section*/
+
+.about{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center; /* Center-align items vertically */
+    justify-content: center;
+    height: 100vh; /* Make the section cover the full screen height */
+    padding: 0 20px; /* Optional: Padding on the sides */
+    background-color: #000000dc;
+    
+}
+.about img{
+    width: 250px; /* Set a fixed width for the image */
+    height: auto; /* Maintain aspect ratio by setting height to auto */
+    border-radius: 10%; /* Optional: make the image slightly rounded */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+    border: 5px solid white; /* Add a white border like a picture frame */
+    padding: 0; /* Remove padding to ensure the border fits snugly */
+    box-sizing: border-box; /* Ensure border is included in the element's dimensions */
+    margin-right: 60px; /* Add space to the right of the image */
+    margin-left: 350px;
+}
+
+    
+.about{    
+    padding: 00px;    
+}
+.Name h2 {
+    font-size: 2rem;
+    color: yellow; /* Set text color to yellow */
+    margin-bottom: 10px; /* Space below the heading */
+}
+
+.Name h2::before {
+    content: ""; /* Empty content for line effect */
+    display: block; /* Make it a block-level element */
+    width: 100%; /* Full width of the parent *____%*/
+    height: 2px; /* Height of the line */
+    background-color: yellow; /* Line color */
+    position: absolute; /* Position it absolutely */
+    top: -10px; /* Align it at the top of the heading */
+    left: 0; /* Align it to the left edge */
+    transform: translateY(-50%);
+}
+
+.Name p{
+    font-size: 1.1rem;
+    color: white;
+    max-width: 1000px; /* Limit the maximum width of the paragraph */
+    line-height: 1.2; /* Adjust the line height for better readability */
+    text-align: left; /* Distribute text evenly across the line */
+    margin: 0; /* Remove any default margins */
+}
+/* Style for the buttons container */
+.buttons {
+    margin-top: 20px; /* Space above the buttons */
+    display: flex;
+    flex-wrap: wrap; /* Allow buttons to wrap to the next line */
+   
+}
+
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px; /* Padding inside the button */
+    margin: 5px; /* Space between buttons */
+    font-size: 1rem; /* Font size for the text */
+    color: #fff; /* Text color */
+    background-color: transparent;
+    text-align: center; /* Center the text */
+    text-decoration: none; /* Remove underline from links */
+    border-radius: 20px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth background color transition */
+    border: 2px solid yellow;
+}
+
+.btn:hover {
+    background-color: black; /* Darker background color on hover */
+}
+
+/* Services Section*/
+
+#services {
+    display: flex;
+    flex-direction: column;   
+    padding: 20px;
+    align-items: center; /* Center content horizontally */
+    background-color: #000000dc;
+    height: 100vh; /* Make the section take up the full viewport height */
+    width: auto;
+    box-sizing: border-box;
+}
+
+#services h1 {
+    text-align: center; /* Center text inside <h1> */
+    width: 100%; /* Ensure <h1> takes up the full width for centering */
+    margin-top: 110px;
+    margin-bottom: 20px; /* Add spacing below the <h1> */
+    color: yellow;
+    
+}
+
+#services h2 {
+    text-align: center; /* Center text inside <h1> */
+    width: 100%; /* Ensure <h1> takes up the full width for centering*/
+    margin-top: 10px;
+    margin-bottom: 10px; /* Add spacing below the <h1> */
+    color: black;
+
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center columns horizontally */
+    gap: 20px; /* Add spacing between columns */
+    max-width: 1200px; /* Adjust width as needed to fit your layout */
+    box-sizing: border-box;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    width: calc(33.333% - 20px); /* Three columns with gap spacing */
+    width: 300px;
+    height: 250px;
+    border: 1px solid black;
+    margin: 20px 0; /* Adjust vertical spacing as needed */
+    align-items: center;
+    text-align: center;
+    padding: 20px 0;
+    border-radius: 15px;
+    background: linear-gradient(to top, rgb(255, 45, 45) 50%, white 50%);
+    background-size: 100% 200%;
+    transition: all .8s;
+}
+
+.box:hover {
+    background-position: left bottom;
+    color: white;
+    border: none;
+}
+
+.box img {
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    padding: 10px;
+}
+
+/* Education  Section */
+
+/* General heading style */
+h1 {
+    text-align: center; /* Centers the h1 text */
+    color: yellow; /* Changes the text color to yellow */
+    font-size: 30px; /* Adjusts the size of the h1 text */
+    margin-bottom: 30px; /* Adds some space below the h1 */
+    margin-top: 50px;
+}
+p {
+    text-align: center; /* Centers the text within the <p> element */
+}
+.center-text {
+    text-align: center; /* Centers the text within elements with this class */
+}
+/* Background color for the education section */
+#education {
+    background-color: #000000dc;
+    padding: 50px; /* Optional: Adds padding inside the section */
+    color: black; /* Optional: Changes text color inside the section for contrast */
+}
+
+/* Timeline container */
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 100px auto;
+}
+
+/* Container style */
+.container {
+    padding: 10px 50px;
+    position: relative;
+    width: 50%;
+    animation: movedown 1s ease-out forwards;
+    opacity: 0;
+    margin-bottom: 55px; /* Increased spacing between boxes */
+}
+
+/* Animation for moving down */
+@keyframes movedown {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+/* Animation delays for each container */
+.container:nth-child(1) {
+    animation-delay: 0.5s;
+}
+.container:nth-child(2) {
+    animation-delay: 1.5s;
+}
+.container:nth-child(3) {
+    animation-delay: 2.5s;
+}
+
+/* Image inside containers */
+.container img {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    top: 32px;
+    z-index: 10;
+    object-fit: cover;
+}
+
+/* Text box styling */
+.text-box {
+    padding: 20px 30px;
+    background: wheat;
+    position: relative;
+    border-radius: 20px;
+    font-size: 15px;
+}
+
+/* Left and right container positioning */
+.left-container {
+    left: 0;
+}
+
+.right-container {
+    left: 50%;
+}
+
+/* Align images in left and right containers */
+.left-container img {
+    right: -20px; /* Align with the vertical line */
+}
+
+.right-container img {
+    left: -20px; /* Align with the vertical line */
+}
+
+/* Vertical line in the timeline */
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 0;
+    background: white;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%); /* Center the line exactly */
+    z-index: 0;
+    animation: moveline 4s ease-out forwards;
+}
+
+/* Animation for the vertical line */
+@keyframes moveline {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 100%;
+    }
+}
+
+/* Ensure containers are above the line */
+.timeline .container {
+    z-index: 1;
+}
+
+/* Text box headings */
+.text-box h2 {
+    font-weight: 600;
+}
+
+.text-box small {
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+/* Arrows for the left and right containers */
+.left-container-arrow {
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid wheat;
+    right: -15px;
+}
+
+.right-container-arrow {
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid wheat;
+    left: -15px;
+}
